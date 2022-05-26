@@ -200,7 +200,7 @@ class command_line:
         self.help()
 
     def help(self):
-        print('%s: [options] [args]' % (self.command_name))
+        print('%s: [options] [args]' % self.command_name)
         print('RTEMS Source Builder, an RTEMS Tools Project (c) 2012-2019 Chris Johns')
         print('Options and arguments:')
         print('--force                : Force the build to proceed')

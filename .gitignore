@@ -1,2 +1,16 @@
 VERSION*
 rsb-*.txt
+
+
+# Python ignores
+.idea
+!**/.idea/runConfigurations
+
+# Eclipse
+.settings
+.cproject
+.project
+.pydevproject
+!**/eclipse/.project
+!**/eclipse/.cproject
+!**/eclipse/.pydevproject
