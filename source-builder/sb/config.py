@@ -989,11 +989,11 @@ class file:
                     else:
                         self._error('invalid if bool operator: ' + reduce(add, ls, ''))
             else:
-                if len(ifls) > 3:
+                if len(ifls) >= 3:
                     for op in ['==', '!=', '>=', '=>', '=<', '<=', '>', '<']:
-                        ops = s.split(op)
-                        if len(ops) == 2:
-                            ifls = (ops[0], op, ops[1])
+                        if op in ifls:
+                            op_pos = ifls.index(op)
+                            ifls = (' '.join(ifls[:op_pos]), op, ' '.join(ifls[op_pos + 1:]))
                             break
                 if len(ifls) != 3:
                      self._error('malformed if: ' + reduce(add, ls, ''))
